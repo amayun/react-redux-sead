@@ -1,0 +1,74 @@
+{
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 6,
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+      "jsx": true,
+      "modules": true
+    }
+  },
+  "rules": {
+    "camelcase": 2,
+    "comma-dangle": 2,
+    "eol-last": 2,
+    "eqeqeq": 2,
+    "import/export": 2,
+    "import/no-duplicates": 2,
+    "import/no-named-as-default": 2,
+    "import/no-unresolved": [2, {"ignore": ["^babel!svg-react!"]}],
+    "indent": [2, 2, {"SwitchCase": 1}],
+    "jsx-quotes": [2, "prefer-double"],
+    "linebreak-style": [2, "unix"],
+    "no-multi-spaces": 2,
+    "no-multiple-empty-lines": [2, {"max": 1, "maxEOF": 0, "maxBOF": 0}],
+    "no-return-assign": 2,
+    "no-trailing-spaces": 2,
+    "no-var": 2,
+    "no-void": 2,
+    "prefer-const": 2,
+    "quotes": [2, "single"],
+    "react/jsx-curly-spacing": 2,
+    "react/jsx-first-prop-new-line": [2, "multiline"],
+    "react/jsx-no-duplicate-props": 2,
+    "react/jsx-uses-react": 2,
+    "react/jsx-uses-vars": 2,
+    "react/jsx-wrap-multilines": 2,
+    "semi": [2, "never"],
+    "sort-imports-es6/sort-imports-es6": [2, {
+      "ignoreCase": true,
+      "ignoreMemberSort": true,
+      "memberSyntaxSortOrder": ["none", "all", "single", "multiple"]
+    }],
+    "space-in-parens": [2, "never"],
+    "strict": 0
+  },
+  "env": {
+    "browser": true,
+    "es6": true,
+    "mocha": true,
+    "node": true
+  },
+  "globals": {
+    "__DEV__": false,
+    "__TEST__": false,
+    "expect": false,
+    "sinon": false,
+    "describe": false,
+    "before": false,
+    "after": false,
+    "it": false
+  },
+  "extends": "eslint:recommended",
+  "plugins": [
+    "react", "import", "sort-imports-es6"
+  ],
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": "webpack.config.js"
+      }
+    }
+  }
+}
