@@ -12,7 +12,7 @@ module.exports = {
   context: __dirname,
   resolve: {
     modules:    [path.resolve(__dirname, 'src/client'), 'node_modules'],
-    extensions: ['', '.json', '.js', '.jsx']
+    extensions: ['.json', '.js', '.jsx']
   },
   module:  {
     rules: [
