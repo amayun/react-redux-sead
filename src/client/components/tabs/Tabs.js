@@ -20,9 +20,10 @@ export default class Tabs extends React.Component {
         <div className="cv-tabs">
           <Nav tabs>
             {this.tabs.map((tab, idx) => (
-                <NavItem key={tab}>
+                <NavItem
+                    key={tab}
+                    className={classnames({active: this.state.activeTab === idx})}>
                   <NavLink
-                      className={classnames({active: this.state.activeTab === idx})}
                       onClick={()=>this.toggle(idx)}>
                     {tab}
                   </NavLink>
